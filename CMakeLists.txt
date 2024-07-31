@@ -22,4 +22,5 @@ add_executable(CS1C_final main.cpp
         highInterestChecking.h
         financial.h
         tests.cpp
-        tests.h)
+        tests.h
+        BankAccountCompat.h)
