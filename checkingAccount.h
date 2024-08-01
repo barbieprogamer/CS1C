@@ -4,17 +4,27 @@
 
 #ifndef HW_06_CHECKINGACCOUNT_H
 #define HW_06_CHECKINGACCOUNT_H
-#include "bankAccount.h"
 
 
-class checkingAccount: public bankAccount{
+#include <iostream>
+
+
+class checkingAccount {
+private:
+	std::string name;
+	int accountNumber;
+	double balance;
+
 public:
 	checkingAccount();
-	checkingAccount(const std::string &newName, int newAccountNumber, double newBalance);
-	~checkingAccount() override;
-	virtual void writeCheck(double amount) = 0;
+	checkingAccount(std::string new_name, int new_account_number, double new_balance);
+	~checkingAccount();
+	void deposit(double amount);
+	void withdraw(double amount);
+	void createStatement();
 
 };
+
 
 
 #endif //HW_06_CHECKINGACCOUNT_H

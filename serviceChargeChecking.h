@@ -4,27 +4,23 @@
 
 #ifndef HW_06_SERVICECHARGECHECKING_H
 #define HW_06_SERVICECHARGECHECKING_H
-#include "checkingAccount.h"
 
-class serviceChargeChecking final : public checkingAccount{
+#include <iostream>
+
+class serviceChargeChecking {
 private:
-	int max_checks;
-	int checkCount;
-	double service_charge;
+	std::string name;
+	int accountNumber;
+	double balance;
 
 public:
 	serviceChargeChecking();
-	serviceChargeChecking(const std::string &newName, int newAccountNumber, double newBalance, int maxChecks,
-						  double serviceCharge);
-	~serviceChargeChecking() final;
-	void writeCheck(double amount) override;
-	void deduct_service_charge();
-	void createStatement() override;
-	int getMaxChecks() const;
-	int getCheckCount() const;
-	double getServiceCharge() const;
+	serviceChargeChecking(std::string new_name, int new_account_number, double new_balance);
+	~serviceChargeChecking();
+	void deposit(double amount);
+	void withdraw(double amount);
+	void createStatement();
 
 };
-
 
 #endif //HW_06_SERVICECHARGECHECKING_H
