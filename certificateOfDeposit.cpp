@@ -3,22 +3,29 @@
 //
 
 #include "certificateOfDeposit.h"
-#include <iomanip>
-certificateOfDeposit::certificateOfDeposit(): bankAccount(),cd_current_month(0), cd_maturity_months(0), interest_rate(0){}
 
 
-certificateOfDeposit::certificateOfDeposit(std::string new_name, int new_account_number, double new_balance,
-										   int new_mat, double new_ir): bankAccount(new_name, new_account_number, new_balance),
-										   cd_maturity_months(new_mat), interest_rate(new_ir){}
+
+certificateOfDeposit::certificateOfDeposit(): name(""), accountNumber(0), balance(0){}
+
+certificateOfDeposit::certificateOfDeposit(std::string new_name, int new_account_number, double new_balance):
+		name(new_name), accountNumber(new_account_number), balance(new_balance){}
 
 certificateOfDeposit::~certificateOfDeposit() {}
 
-void certificateOfDeposit::createStatement() {
-	std::cout << "Certificate of deposit statement." << std::endl;
+
+void certificateOfDeposit::deposit(double amount) {
+	balance += amount;
 
 }
 
-void certificateOfDeposit::pay_out_interest() {
-	balance += (interest_rate * balance);
+void certificateOfDeposit::withdraw(double amount) {
+	if (balance - amount >= 0)
+		balance -= amount;
+	else
+		std::cout << "Not enough in account to withdraw." << std::endl;
+}
 
+void certificateOfDeposit::createStatement() {
+	std::cout << "Certificate of deposit statement." << std::endl;
 }

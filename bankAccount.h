@@ -6,29 +6,20 @@
 #define HW_06_BANKACCOUNT_H
 
 #include <iostream>
-#include <chrono>
 
 class bankAccount {
-protected:
+private:
 	std::string name;
 	int accountNumber;
 	double balance;
-	static std::chrono::year_month today_m_y;
-
 
 public:
 	bankAccount();
 	bankAccount(std::string new_name, int new_account_number, double new_balance);
-	virtual ~bankAccount();
-	std::string retrieveName();
-	int retrieveAccountNumber();
-	double retrieveBalance();
+	~bankAccount();
 	void deposit(double amount);
-	virtual void withdraw(double amount);
-	virtual void createStatement();
-
-
-
+	void withdraw(double amount);
+	void createStatement();
 
 };
 

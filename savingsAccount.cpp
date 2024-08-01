@@ -4,19 +4,26 @@
 
 #include "savingsAccount.h"
 
-void savingsAccount::pay_out_interest() {
-	balance += (interest_rate * balance);
 
+
+savingsAccount::savingsAccount(): name(""), accountNumber(0), balance(0){}
+
+savingsAccount::savingsAccount(std::string new_name, int new_account_number, double new_balance):
+		name(new_name), accountNumber(new_account_number), balance(new_balance){}
+
+savingsAccount::~savingsAccount() {}
+
+
+void savingsAccount::deposit(double amount) {
+	balance += amount;
 
 }
 
-savingsAccount::savingsAccount(const std::string &newName, int newAccountNumber, double newBalance, double interestRate)
-		: bankAccount(newName, newAccountNumber, newBalance), interest_rate(interestRate) {}
-
-savingsAccount::savingsAccount(): interest_rate(0) {}
-
-savingsAccount::~savingsAccount() {
-
+void savingsAccount::withdraw(double amount) {
+	if (balance - amount >= 0)
+		balance -= amount;
+	else
+		std::cout << "Not enough in account to withdraw." << std::endl;
 }
 
 void savingsAccount::createStatement() {
