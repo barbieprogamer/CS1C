@@ -3,7 +3,6 @@
 #include "BankAccountCompat.h"
 
 int main() {
-	BankAccountCompat<highInterestChecking> gary(highInterestChecking claire);
 
 
 
