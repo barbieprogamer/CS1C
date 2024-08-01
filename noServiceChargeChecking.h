@@ -12,10 +12,11 @@ private:
 	std::string name;
 	int accountNumber;
 	double balance;
+	double minimum_balance;
 
 public:
 	noServiceChargeChecking();
-	noServiceChargeChecking(std::string new_name, int new_account_number, double new_balance);
+	noServiceChargeChecking(std::string new_name, int new_account_number, double new_balance, double new_minimum_balance);
 	~noServiceChargeChecking();
 	void deposit(double amount);
 	void withdraw(double amount);

@@ -14,10 +14,11 @@ private:
 	std::string name;
 	int accountNumber;
 	double balance;
+	double minimum_balance;
 
 public:
 	highInterestSavings();
-	highInterestSavings(std::string new_name, int new_account_number, double new_balance);
+	highInterestSavings(std::string new_name, int new_account_number, double new_balance, double new_minimum_balance);
 	~highInterestSavings();
 	void deposit(double amount);
 	void withdraw(double amount);

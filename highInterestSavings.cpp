@@ -6,8 +6,8 @@
 
 highInterestSavings::highInterestSavings(): name(""), accountNumber(0), balance(0){}
 
-highInterestSavings::highInterestSavings(std::string new_name, int new_account_number, double new_balance):
-		name(new_name), accountNumber(new_account_number), balance(new_balance){}
+highInterestSavings::highInterestSavings(std::string new_name, int new_account_number, double new_balance, double new_minimum_balance):
+		name(new_name), accountNumber(new_account_number), balance(new_balance), minimum_balance(new_minimum_balance){}
 
 highInterestSavings::~highInterestSavings() {}
 
