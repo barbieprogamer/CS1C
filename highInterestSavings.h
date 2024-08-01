@@ -4,19 +4,24 @@
 
 #ifndef HW_06_HIGHINTERESTSAVINGS_H
 #define HW_06_HIGHINTERESTSAVINGS_H
-#include "savingsAccount.h"
 
-class highInterestSavings final: public savingsAccount{
+
+#include <iostream>
+
+
+class highInterestSavings {
 private:
-	double minimum_balance;
+	std::string name;
+	int accountNumber;
+	double balance;
 
 public:
 	highInterestSavings();
-	highInterestSavings(const std::string &newName, int newAccountNumber, double newBalance, double interestRate,
-						double minimumBalance);
-	~highInterestSavings() final;
-	void withdraw(double amount) final;
-	void createStatement() final;
+	highInterestSavings(std::string new_name, int new_account_number, double new_balance);
+	~highInterestSavings();
+	void deposit(double amount);
+	void withdraw(double amount);
+	void createStatement();
 
 };
 

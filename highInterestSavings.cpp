@@ -4,23 +4,25 @@
 
 #include "highInterestSavings.h"
 
-void highInterestSavings::withdraw(double amount) {
-	if (balance - amount < minimum_balance)
-		std::cout << "Cannot withdraw beyond minimum balance" << std::endl;
-	else
-		bankAccount::withdraw(amount);
+highInterestSavings::highInterestSavings(): name(""), accountNumber(0), balance(0){}
+
+highInterestSavings::highInterestSavings(std::string new_name, int new_account_number, double new_balance):
+		name(new_name), accountNumber(new_account_number), balance(new_balance){}
+
+highInterestSavings::~highInterestSavings() {}
+
+
+void highInterestSavings::deposit(double amount) {
+	balance += amount;
+
 }
 
-highInterestSavings::highInterestSavings(const std::string &newName, int newAccountNumber, double newBalance,
-										 double interestRate, double minimumBalance) : savingsAccount(newName,
-																									  newAccountNumber,
-																									  newBalance,
-																									  interestRate),
-																					   minimum_balance(
-																							   minimumBalance) {}
-highInterestSavings::highInterestSavings(): minimum_balance(0){}
-
-highInterestSavings::~highInterestSavings(){}
+void highInterestSavings::withdraw(double amount) {
+	if (balance - amount >= 0)
+		balance -= amount;
+	else
+		std::cout << "Not enough in account to withdraw." << std::endl;
+}
 
 void highInterestSavings::createStatement() {
 	std::cout << "High interest savings account statement." << std::endl;

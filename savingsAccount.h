@@ -4,20 +4,23 @@
 
 #ifndef HW_06_SAVINGSACCOUNT_H
 #define HW_06_SAVINGSACCOUNT_H
-#include "bankAccount.h"
 
-class savingsAccount: public bankAccount{
-protected:
-	double interest_rate;
+#include <iostream>
+
+class savingsAccount {
+private:
+	std::string name;
+	int accountNumber;
+	double balance;
+
 public:
 	savingsAccount();
-	savingsAccount(const std::string &newName, int newAccountNumber, double newBalance, double interestRate);
-	void pay_out_interest();
-	void createStatement() override;
-	~savingsAccount() override;
-
+	savingsAccount(std::string new_name, int new_account_number, double new_balance);
+	~savingsAccount();
+	void deposit(double amount);
+	void withdraw(double amount);
+	void createStatement();
 
 };
-
 
 #endif //HW_06_SAVINGSACCOUNT_H

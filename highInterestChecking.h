@@ -4,15 +4,26 @@
 
 #ifndef HW_06_HIGHINTERESTCHECKING_H
 #define HW_06_HIGHINTERESTCHECKING_H
-#include "noServiceChargeChecking.h"
 
-class highInterestChecking final: public noServiceChargeChecking{
+
+
+#include <iostream>
+
+
+class highInterestChecking {
+private:
+	std::string name;
+	int accountNumber;
+	double balance;
+
 public:
 	highInterestChecking();
-	highInterestChecking(const std::string &newName, int newAccountNumber, double newBalance, double minimumBalance,
-						 double interestRate);
-	~highInterestChecking() final;
-	void createStatement() final;
+	highInterestChecking(std::string new_name, int new_account_number, double new_balance);
+	~highInterestChecking();
+	void deposit(double amount);
+	void withdraw(double amount);
+	void createStatement();
+
 };
 
 

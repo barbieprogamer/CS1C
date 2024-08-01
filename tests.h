@@ -2,11 +2,7 @@
 // Created by clair on 7/23/2024.
 //
 
-#include "serviceChargeChecking.h"
-#include "highInterestChecking.h"
-#include "certificateOfDeposit.h"
-#include "highInterestSavings.h"
-
+#include "financial.h"
 
 
 void test_bank_account();
