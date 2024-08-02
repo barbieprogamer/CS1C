@@ -26,6 +26,6 @@ void certificateOfDeposit::withdraw(double amount) {
 		std::cout << "Not enough in account to withdraw." << std::endl;
 }
 
-void certificateOfDeposit::createStatement() {
+void certificateOfDeposit::createStatement() const{
 	std::cout << "Certificate of deposit statement." << std::endl;
 }

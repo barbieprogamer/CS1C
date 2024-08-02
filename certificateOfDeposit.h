@@ -20,7 +20,7 @@ public:
 	~certificateOfDeposit();
 	void deposit(double amount);
 	void withdraw(double amount);
-	void createStatement();
+	void createStatement() const;
 
 };
 

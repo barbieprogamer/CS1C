@@ -3,7 +3,7 @@
 #include "BankAccountCompat.h"
 
 int main() {
-
+	main_test();
 
 
 

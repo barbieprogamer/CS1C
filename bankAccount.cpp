@@ -24,7 +24,7 @@ void bankAccount::withdraw(double amount) {
 		std::cout << "Not enough in account to withdraw." << std::endl;
 }
 
-void bankAccount::createStatement() {
+void bankAccount::createStatement() const{
 	std::cout << "Bank account statement." << std::endl;
 }
 
