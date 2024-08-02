@@ -1,3 +1,0 @@
-C:/Users/clair/CLionProjects/HW_06/CS1C/cmake-build-debug/CMakeFiles/CS1C_final.dir
-C:/Users/clair/CLionProjects/HW_06/CS1C/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/clair/CLionProjects/HW_06/CS1C/cmake-build-debug/CMakeFiles/rebuild_cache.dir

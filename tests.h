@@ -3,3 +3,5 @@
 //
 
 #include "financial.h"
+
+void main_test();

@@ -12,7 +12,7 @@
 #include "noServiceChargeChecking.h"
 #include "savingsAccount.h"
 #include "serviceChargeChecking.h"
-
+#include "BankAccountCompat.h"
 
 
 #endif //HW_06_FINANCIAL_H

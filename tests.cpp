@@ -4,3 +4,9 @@
 
 #include "financial.h"
 
+void main_test(){
+	BankAccount(BankAccount(bankAccount()))
+
+
+
+}
